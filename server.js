@@ -113,7 +113,7 @@ app.post('/event/like',
         // the URL for the backend service should be set in configuration 
         // using an environment variable. Here, the variable is passed 
         // to npm start inside package.json:
-        //  "start": "BACKEND_URL=http://localhost:8082 node server.js",
+        //  "start": "BACKEND_URL=http://localhost:8081 node server.js",
         // changed to a put now that real data is being updated
         request.put(  // first argument: url + data + formats
             {
@@ -174,7 +174,7 @@ const server = app.listen(SERVICE_PORT, () => {
     const host = server.address().address;
     const port = server.address().port;
 
-    console.log(`Events app listening at http://${host}:${port}`);
+    console.log(`Like Events app listening at http://${host}:${port}`);
+    
 });
-
 module.exports = app;
